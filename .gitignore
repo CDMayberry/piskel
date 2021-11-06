@@ -28,6 +28,10 @@ diff.txt
 dest
 build/closure/closure_compiled_binary.js
 
+# Typescript
+.tscache
+compiled
+
 # spriting artifacts
 src/img/icons.png
 src/img/icons@2x.png

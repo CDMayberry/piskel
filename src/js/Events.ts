@@ -1,5 +1,5 @@
 // TODO(grosbouddha): put under pskl namespace.
-var Events = {
+const Events = {
 
   TOOL_SELECTED : 'TOOL_SELECTED',
   SELECT_TOOL : 'SELECT_TOOL',

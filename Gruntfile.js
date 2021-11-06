@@ -62,6 +62,17 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
+    ts: {
+      options: {
+          rootDir: 'src/js',
+          // No source, causes problems with uglify atm.
+          sourceMap: false
+      },
+      build: {
+        src: ["src/js/**/*.ts", "!node_modules/**", "!dest/**"],          // The source typescript files, http://gruntjs.com/configuring-tasks#files
+        outDir: 'src/js/compiled',             // If specified, generate an out.js file which is the merged js file
+      }
+    },
     clean: {
       all: ['dest', 'src/img/icons.png', 'src/css/icons.css'],
       prod: ['dest/prod', 'dest/tmp'],
@@ -86,7 +97,8 @@ module.exports = function(grunt) {
         'src/js/**/*.js',
         // Exludes
         // TODO: remove this (for now we still get warnings from the lib folder)
-        '!src/js/**/lib/**/*.js'
+        '!src/js/**/lib/**/*.js',
+        '!src/js/compiled/**/*.js'
       ],
       options: {
         fix: grunt.option('fix') // this will get params from the flags
@@ -305,6 +317,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks("grunt-ts");
   // TEST TASKS
   // Run linting
   grunt.registerTask('lint', ['eslint', 'leadingIndent:css']);
@@ -326,11 +339,12 @@ module.exports = function(grunt) {
   // BUILD TASKS
   grunt.registerTask('build-index.html', ['includereplace']);
   grunt.registerTask('merge-statics', ['concat:js', 'concat:css', 'uglify']);
-  grunt.registerTask('build',  ['clean:prod', 'sprite', 'merge-statics', 'build-index.html', 'replace:mainPartial', 'replace:css', 'copy:prod']);
+  grunt.registerTask('build',  ['clean:prod', 'sprite', 'ts:build', 'merge-statics', 'build-index.html', 'replace:mainPartial', 'replace:css', 'copy:prod']);
   grunt.registerTask('build-dev',  ['clean:dev', 'sprite', 'build-index.html', 'copy:dev']);
   grunt.registerTask('desktop', ['clean:desktop', 'default', 'nwjs:windows']);
   grunt.registerTask('desktop-mac', ['clean:desktop', 'default', 'nwjs:macos']);
   grunt.registerTask('desktop-mac-old', ['clean:desktop', 'default', 'replace:desktop', 'nwjs:macos_old']);
+  grunt.registerTask('build-ts', ["ts:build"]);
 
   // SERVER TASKS
   // Start webserver and watch for changes

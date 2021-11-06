@@ -8,8 +8,8 @@
   "js/lib/bootstrap/bootstrap.js",
 
   // Application wide configuration
-  "js/Constants.js",
-  "js/Events.js",
+  "js/compiled/Constants.js",
+  "js/compiled/Events.js",
 
   // Libraries
   "js/utils/core.js",
@@ -70,14 +70,14 @@
   "js/rendering/DrawingLoop.js",
 
   // Models
-  "js/model/Frame.js",
-  "js/model/Layer.js",
-  "js/model/piskel/Descriptor.js",
-  "js/model/frame/CachedFrameProcessor.js",
-  "js/model/frame/AsyncCachedFrameProcessor.js",
-  "js/model/frame/RenderedFrame.js",
-  "js/model/Palette.js",
-  "js/model/Piskel.js",
+  "js/compiled/model/Frame.js",
+  "js/compiled/model/Layer.js",
+  "js/compiled/model/piskel/Descriptor.js",
+  "js/compiled/model/frame/CachedFrameProcessor.js",
+  "js/compiled/model/frame/AsyncCachedFrameProcessor.js",
+  "js/compiled/model/frame/RenderedFrame.js",
+  "js/compiled/model/Palette.js",
+  "js/compiled/model/Piskel.js",
 
   // Database (IndexedDB)
   "js/database/BackupDatabase.js",
@@ -264,7 +264,7 @@
   "js/worker/imageprocessor/ImageProcessor.js",
 
   // Application controller and initialization
-  "js/app.js",
+  "js/compiled/app.js",
 
   // Bonus features !!
   "js/snippets.js"
