@@ -289,7 +289,7 @@
         pixelStep = Infinity;
       }
 
-      var maxDistance = pskl.utils.Math.distance(x0, x1, y0, y1);
+      var maxDistance = pskl.utils.math.distance(x0, x1, y0, y1);
 
       var x = x0;
       var y = y0;
@@ -298,7 +298,7 @@
         i++;
 
         pixels.push({'col': x, 'row': y});
-        if (pskl.utils.Math.distance(x0, x, y0, y) >= maxDistance) {
+        if (pskl.utils.math.distance(x0, x, y0, y) >= maxDistance) {
           break;
         }
 

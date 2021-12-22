@@ -81,7 +81,7 @@
     // Maximum zoom is relative to the display dimensions to ensure at least 10 pixels can
     // be drawn on screen.
     var maximumZoom = Math.min(this.displayWidth, this.displayHeight) / 10;
-    zoom = pskl.utils.Math.minmax(zoom, minimumZoom, maximumZoom);
+    zoom = pskl.utils.math.minmax(zoom, minimumZoom, maximumZoom);
 
     if (zoom == this.zoom) {
       return;
@@ -131,9 +131,9 @@
     var width = pskl.app.piskelController.getWidth();
     var height = pskl.app.piskelController.getHeight();
     var maxX = width - (this.displayWidth / this.zoom);
-    x = pskl.utils.Math.minmax(x, 0, maxX);
+    x = pskl.utils.math.minmax(x, 0, maxX);
     var maxY = height - (this.displayHeight / this.zoom);
-    y = pskl.utils.Math.minmax(y, 0, maxY);
+    y = pskl.utils.math.minmax(y, 0, maxY);
 
     this.offset.x = x;
     this.offset.y = y;
@@ -364,7 +364,7 @@
    */
   ns.FrameRenderer.prototype.drawTiledFrames_ = function (context, image, w, h, z) {
     var opacity = pskl.UserSettings.get('SEAMLESS_OPACITY');
-    opacity = pskl.utils.Math.minmax(opacity, 0, 1);
+    opacity = pskl.utils.math.minmax(opacity, 0, 1);
     context.fillStyle = 'rgba(255, 255, 255, ' + opacity + ')';
     [[0, -1], [0, 1], [-1, -1], [-1, 0], [-1, 1], [1, -1], [1, 0], [1, 1]].forEach(function (d) {
       context.drawImage(image, d[0] * w * z, d[1] * h * z);

@@ -340,7 +340,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build-index.html', ['includereplace']);
   grunt.registerTask('merge-statics', ['concat:js', 'concat:css', 'uglify']);
   grunt.registerTask('build',  ['clean:prod', 'sprite', 'ts:build', 'merge-statics', 'build-index.html', 'replace:mainPartial', 'replace:css', 'copy:prod']);
-  grunt.registerTask('build-dev',  ['clean:dev', 'sprite', 'build-index.html', 'copy:dev']);
+  grunt.registerTask('build-dev',  ['clean:dev', 'sprite', 'ts:build', 'build-index.html', 'copy:dev']);
   grunt.registerTask('desktop', ['clean:desktop', 'default', 'nwjs:windows']);
   grunt.registerTask('desktop-mac', ['clean:desktop', 'default', 'nwjs:macos']);
   grunt.registerTask('desktop-mac-old', ['clean:desktop', 'default', 'replace:desktop', 'nwjs:macos_old']);

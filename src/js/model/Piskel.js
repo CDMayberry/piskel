@@ -101,7 +101,7 @@
     if (fromIndex == -1 || toIndex == -1 || fromIndex == toIndex) {
       return;
     }
-    toIndex = pskl.utils.Math.minmax(toIndex, 0, this.layers.length - 1);
+    toIndex = pskl.utils.math.minmax(toIndex, 0, this.layers.length - 1);
     var layer = this.layers.splice(fromIndex, 1)[0];
     this.layers.splice(toIndex, 0, layer);
   };

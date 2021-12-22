@@ -65,8 +65,8 @@
    */
   ns.LassoSelect.prototype.addPixel_ = function (col, row, frame) {
     // normalize coordinates to always remain inside the frame
-    col = pskl.utils.Math.minmax(col, 0, frame.getWidth() - 1);
-    row = pskl.utils.Math.minmax(row, 0, frame.getHeight() - 1);
+    col = pskl.utils.math.minmax(col, 0, frame.getWidth() - 1);
+    row = pskl.utils.math.minmax(row, 0, frame.getHeight() - 1);
 
     // line interpolation needed in case mousemove was too fast
     var interpolatedPixels = pskl.PixelUtils.getLinePixels(col, this.previousCol, row, this.previousRow);

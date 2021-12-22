@@ -8,7 +8,6 @@ module pskl {
 
   export declare var appEnginePiskelData_;
   export declare var appEngineToken_;
-  export declare var UserSettings;
 
   export declare var service; 
   export declare var controller;

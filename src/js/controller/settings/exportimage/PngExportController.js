@@ -99,7 +99,7 @@
     var frameCount = this.piskelController.getFrameCount();
     var bestFit = Math.round(Math.sqrt(frameCount / ratio));
 
-    return pskl.utils.Math.minmax(bestFit, 1, frameCount);
+    return pskl.utils.math.minmax(bestFit, 1, frameCount);
   };
 
   ns.PngExportController.prototype.onScaleChanged_ = function () {
@@ -124,7 +124,7 @@
 
     // Force the value to be in bounds, if the user tried to update it by directly typing
     // a value.
-    value = pskl.utils.Math.minmax(value, 1, this.piskelController.getFrameCount());
+    value = pskl.utils.math.minmax(value, 1, this.piskelController.getFrameCount());
     this.columnsInput.value = value;
 
     // Update readonly rowsInput
