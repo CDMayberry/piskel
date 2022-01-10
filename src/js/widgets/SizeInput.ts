@@ -1,5 +1,5 @@
 module pskl {
-  export module widget {
+  export module widgets {
 
     /**
      * Synchronize two "number" inputs to stick to their initial ratio.

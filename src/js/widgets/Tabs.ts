@@ -1,5 +1,5 @@
 module pskl {
-  export module widget {
+  export module widgets {
 
     export class Tabs {
       tabs: any;

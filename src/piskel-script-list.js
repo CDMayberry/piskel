@@ -167,15 +167,15 @@
   "js/controller/dialogs/DialogsController.js",
 
   // Widgets
-  "js/widgets/AnchorWidget.js",
-  "js/widgets/ColorsList.js",
-  "js/widgets/FramePicker.js",
-  "js/widgets/HslRgbColorPicker.js",
-  "js/widgets/SizeInput.js",
-  "js/widgets/SizePicker.js",
-  "js/widgets/SynchronizedInputs.js",
-  "js/widgets/Tabs.js",
-  "js/widgets/Wizard.js",
+  "js/compiled/widgets/AnchorWidget.js",
+  "js/compiled/widgets/ColorsList.js",
+  "js/compiled/widgets/FramePicker.js",
+  "js/compiled/widgets/HslRgbColorPicker.js",
+  "js/compiled/widgets/SizeInput.js",
+  "js/compiled/widgets/SizePicker.js",
+  "js/compiled/widgets/SynchronizedInputs.js",
+  "js/compiled/widgets/Tabs.js",
+  "js/compiled/widgets/Wizard.js",
 
   // Services
   "js/service/storage/StorageService.js",
@@ -215,9 +215,9 @@
   "js/service/performance/PerformanceReportService.js",
 
   // Tools
-  "js/tools/ToolsHelper.js",
-  "js/tools/Tool.js",
-  "js/tools/ToolIconBuilder.js",
+  "js/compiled/tools/ToolsHelper.js",
+  "js/compiled/tools/Tool.js",
+  "js/compiled/tools/ToolIconBuilder.js",
   "js/tools/drawing/BaseTool.js",
   "js/tools/drawing/ShapeTool.js",
   "js/tools/drawing/SimplePen.js",
@@ -237,13 +237,13 @@
   "js/tools/drawing/ColorPicker.js",
   "js/tools/drawing/ColorSwap.js",
   "js/tools/drawing/DitheringTool.js",
-  "js/tools/transform/AbstractTransformTool.js",
-  "js/tools/transform/Center.js",
-  "js/tools/transform/Clone.js",
-  "js/tools/transform/Crop.js",
-  "js/tools/transform/Flip.js",
-  "js/tools/transform/Rotate.js",
-  "js/tools/transform/TransformUtils.js",
+  "js/compiled/tools/transform/AbstractTransformTool.js",
+  "js/compiled/tools/transform/Center.js",
+  "js/compiled/tools/transform/Clone.js",
+  "js/compiled/tools/transform/Crop.js",
+  "js/compiled/tools/transform/Flip.js",
+  "js/compiled/tools/transform/Rotate.js",
+  "js/compiled/tools/transform/TransformUtils.js",
 
   // Devtools
   "js/devtools/DrawingTestPlayer.js",

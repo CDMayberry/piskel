@@ -18,6 +18,7 @@ module pskl {
   export module app {
     export declare var shortcutService;
     export declare var piskelController;
+    export declare var selectionManager;
 
     export function init() {
       /**

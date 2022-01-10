@@ -1,3 +1,5 @@
+/// <reference path="../../Constants.ts" />
+
 module pskl {
     export module worker {
         export module framecolors {
@@ -12,11 +14,11 @@ module pskl {
                 const componentToHex = function (c) {
                     var hex = c.toString(16);
                     return hex.length == 1 ? '0' + hex : hex;
-                };
+                }
         
                 const rgbToHex = function (r, g, b) {
                     return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
-                };
+                }
         
                 const toHexString_ = function (color) {
                     if (color === TRANSPARENT_COLOR) {
@@ -33,7 +35,7 @@ module pskl {
                             return rgbToHex(exec[1] * 1, exec[2] * 1, exec[3] * 1);
                         }
                     }
-                };
+                }
         
                 var intHexCache = {};
                 const intToHex = function (int) {
@@ -44,7 +46,7 @@ module pskl {
                     var hex = rgbToHex(int & 0xff, int >> 8 & 0xff, int >> 16 & 0xff);
                     intHexCache[int] = hex;
                     return hex;
-                };
+                }
         
                 const getFrameColors = function (frame) {
                     var frameColors = {};
@@ -60,7 +62,7 @@ module pskl {
                         }
                     }
                     return frameColors;
-                };
+                }
         
                 this.onmessage = function (event) {
                     try {
@@ -78,7 +80,7 @@ module pskl {
                             message: e.message
                         });
                     }
-                };
+                }
             }
         }
     }

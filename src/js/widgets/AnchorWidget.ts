@@ -1,5 +1,5 @@
 module pskl {
-  export module widget {
+  export module widgets {
     const OPTION_CLASSNAME = 'anchor-option';
     // Maybe move to HTML ...
     const WIDGET_TEMPLATE =

@@ -1,5 +1,5 @@
 module pskl {
-  export module widget {
+  export module widgets {
     const DEFAULT_COLOR = '#000000';
 
     export class ColorsList {

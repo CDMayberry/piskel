@@ -1,5 +1,5 @@
 module pskl {
-  export module widget {
+  export module widgets {
     const WIDGET_MARKUP =
       '<div class="frame-viewer"></div>' +
       '<div class="frame-nav">' +
