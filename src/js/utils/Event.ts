@@ -1,7 +1,7 @@
 module pskl {
     export module utils {
         export module Event {
-            export function addEventListener(el, type, callback, scope, args) {
+            export function addEventListener(el, type, callback, scope, args?) {
                 if (typeof el === 'string') {
                     el = document.querySelector(el);
                 }

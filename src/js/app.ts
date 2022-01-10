@@ -242,6 +242,7 @@ module pskl {
     }
 
     export function initTooltips_ () {
+      //@ts-ignore
       $('body').tooltip({
         selector: '[rel=tooltip]'
       });
