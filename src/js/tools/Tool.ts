@@ -21,6 +21,7 @@ module pskl {
 
             raiseSaveStateEvent(replayData) {
                 $.publish(Events.PISKEL_SAVE_STATE, {
+                    //@ts-ignore
                     type: pskl.service.HistoryService.REPLAY,
                     scope: this,
                     replay: replayData

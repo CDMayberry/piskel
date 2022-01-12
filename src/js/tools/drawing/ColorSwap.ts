@@ -1,0 +1,66 @@
+module pskl {
+    export module tools {
+        export module drawing {
+            export class ColorSwap extends BaseTool {
+                constructor() {
+                    super();
+
+                    this.toolId = 'tool-colorswap';
+                    this.helpText = 'Paint all pixels of the same color';
+                    this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.COLORSWAP;
+
+                    this.tooltipDescriptors = [
+                        { key: 'ctrl', description: 'Apply to all layers' },
+                        { key: 'shift', description: 'Apply to all frames' }
+                    ]
+                }
+
+                /**
+                 * @override
+                 */
+                applyToolAt (col, row, frame, overlay, event) {
+                    if (frame.containsPixel(col, row)) {
+                        var oldColor = frame.getPixel(col, row);
+                        var newColor = this.getToolColor();
+
+                        var allLayers = pskl.utils.UserAgent.isMac ? event.metaKey : event.ctrlKey;
+                        var allFrames = event.shiftKey;
+                        this.swapColors_(oldColor, newColor, allLayers, allFrames);
+
+                        this.raiseSaveStateEvent({
+                            allLayers: allLayers,
+                            allFrames: allFrames,
+                            oldColor: oldColor,
+                            newColor: newColor
+                        });
+                    }
+                }
+
+                replay(frame, replayData) {
+                    this.swapColors_(replayData.oldColor, replayData.newColor, replayData.allLayers, replayData.allFrames);
+                }
+
+                swapColors_(oldColor, newColor, allLayers, allFrames) {
+                    var currentFrameIndex = pskl.app.piskelController.getCurrentFrameIndex();
+                    var layers = allLayers ? pskl.app.piskelController.getLayers() : [pskl.app.piskelController.getCurrentLayer()];
+                    layers.forEach(function (layer) {
+                        var frames = allFrames ? layer.getFrames() : [layer.getFrameAt(currentFrameIndex)];
+                        frames.forEach(function (frame) {
+                            this.applyToolOnFrame_(frame, oldColor, newColor);
+                        }.bind(this));
+                    }.bind(this));
+                }
+
+                applyToolOnFrame_(frame, oldColor, newColor) {
+                    oldColor = pskl.utils.colorToInt(oldColor);
+                    newColor = pskl.utils.colorToInt(newColor);
+                    frame.forEachPixel(function (color, col, row) {
+                        if (color !== null && color == oldColor) {
+                            frame.setPixel(col, row, newColor);
+                        }
+                    });
+                }
+            }
+        }
+    }
+}

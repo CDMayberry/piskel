@@ -31,38 +31,29 @@ module pskl {
                 getRenderedFrame() {
                     return this.renderFn();
                 }
-    
-                getHash () {
+
+                getHash() {
                     return this.id;
                 }
-    
+
                 getWidth() {
                     return this.width;
                 }
-    
-                getHeight () {
+
+                getHeight() {
                     return this.height;
                 }
-            }
 
-            //@ts-ignore
-            RenderedFrame.prototype.getPixels = Constants.ABSTRACT_FUNCTION;
-            //@ts-ignore
-            RenderedFrame.prototype.containsPixel = Constants.ABSTRACT_FUNCTION;
-            //@ts-ignore
-            RenderedFrame.prototype.isSameSize = Constants.ABSTRACT_FUNCTION;
-            //@ts-ignore
-            RenderedFrame.prototype.clone = Constants.ABSTRACT_FUNCTION;
-            //@ts-ignore
-            RenderedFrame.prototype.setPixels = Constants.ABSTRACT_FUNCTION;
-            //@ts-ignore
-            RenderedFrame.prototype.clear = Constants.ABSTRACT_FUNCTION;
-            //@ts-ignore
-            RenderedFrame.prototype.setPixel = Constants.ABSTRACT_FUNCTION;
-            //@ts-ignore
-            RenderedFrame.prototype.getPixel = Constants.ABSTRACT_FUNCTION;
-            //@ts-ignore
-            RenderedFrame.prototype.forEachPixel = Constants.ABSTRACT_FUNCTION;
+                getPixels = Constants.ABSTRACT_FUNCTION;
+                containsPixel = Constants.ABSTRACT_FUNCTION;
+                isSameSize = Constants.ABSTRACT_FUNCTION;
+                clone = Constants.ABSTRACT_FUNCTION;
+                setPixels = Constants.ABSTRACT_FUNCTION;
+                clear = Constants.ABSTRACT_FUNCTION;
+                setPixel = Constants.ABSTRACT_FUNCTION;
+                getPixel = Constants.ABSTRACT_FUNCTION;
+                forEachPixel = Constants.ABSTRACT_FUNCTION;
+            }
         }
     }
 }

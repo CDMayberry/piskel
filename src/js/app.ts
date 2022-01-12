@@ -9,16 +9,20 @@ module pskl {
   export declare var appEnginePiskelData_;
   export declare var appEngineToken_;
 
-  export declare var service; 
   export declare var controller;
   export declare var selection;
   export declare var rendering;
   export declare var devtools;
 
   export module app {
+    // TODO: Come back and give these proper types after.
     export declare var shortcutService;
     export declare var piskelController;
     export declare var selectionManager;
+    export declare var mouseStateService;
+    export declare var selectedColorsService;
+    export declare var penSizeService;
+    export declare var drawingController;
 
     export function init() {
       /**
@@ -49,21 +53,27 @@ module pskl {
       this.piskelController = new pskl.controller.piskel.PublicPiskelController(this.corePiskelController);
       this.piskelController.init();
 
+      //@ts-ignore
       this.paletteImportService = new pskl.service.palette.PaletteImportService();
       this.paletteImportService.init();
 
+      //@ts-ignore
       this.paletteService = new pskl.service.palette.PaletteService();
+      //@ts-ignore
       this.paletteService.addDynamicPalette(new pskl.service.palette.CurrentColorsPalette());
 
+      //@ts-ignore
       this.selectedColorsService = new pskl.service.SelectedColorsService();
       this.selectedColorsService.init();
 
+      //@ts-ignore
       this.mouseStateService = new pskl.service.MouseStateService();
       this.mouseStateService.init();
 
       this.paletteController = new pskl.controller.PaletteController();
       this.paletteController.init();
 
+      //@ts-ignore
       this.currentColorsService = new pskl.service.CurrentColorsService(this.piskelController);
       this.currentColorsService.init();
 
@@ -110,6 +120,7 @@ module pskl {
       this.selectionManager = new pskl.selection.SelectionManager(this.piskelController);
       this.selectionManager.init();
 
+      //@ts-ignore
       this.historyService = new pskl.service.HistoryService(this.piskelController);
       this.historyService.init();
 
@@ -125,38 +136,49 @@ module pskl {
       this.canvasBackgroundController = new pskl.controller.CanvasBackgroundController();
       this.canvasBackgroundController.init();
 
+      //@ts-ignore
       this.indexedDbStorageService = new pskl.service.storage.IndexedDbStorageService(this.piskelController);
       this.indexedDbStorageService.init();
 
+      //@ts-ignore
       this.localStorageService = new pskl.service.storage.LocalStorageService(this.piskelController);
       this.localStorageService.init();
 
+      //@ts-ignore
       this.fileDownloadStorageService = new pskl.service.storage.FileDownloadStorageService(this.piskelController);
       this.fileDownloadStorageService.init();
 
+      //@ts-ignore
       this.desktopStorageService = new pskl.service.storage.DesktopStorageService(this.piskelController);
       this.desktopStorageService.init();
 
+      //@ts-ignore
       this.galleryStorageService = new pskl.service.storage.GalleryStorageService(this.piskelController);
       this.galleryStorageService.init();
 
+      //@ts-ignore
       this.storageService = new pskl.service.storage.StorageService(this.piskelController);
       this.storageService.init();
 
+      //@ts-ignore
       this.importService = new pskl.service.ImportService(this.piskelController);
       this.importService.init();
 
+      //@ts-ignore
       this.imageUploadService = new pskl.service.ImageUploadService();
       this.imageUploadService.init();
 
+      //@ts-ignore
       this.savedStatusService = new pskl.service.SavedStatusService(
         this.piskelController,
         this.historyService);
       this.savedStatusService.init();
 
+      //@ts-ignore
       this.backupService = new pskl.service.BackupService(this.piskelController);
       this.backupService.init();
 
+      //@ts-ignore
       this.beforeUnloadService = new pskl.service.BeforeUnloadService(this.piskelController);
       this.beforeUnloadService.init();
 
@@ -165,23 +187,27 @@ module pskl {
         this.savedStatusService);
       this.headerController.init();
 
+      //@ts-ignore
       this.penSizeService = new pskl.service.pensize.PenSizeService();
       this.penSizeService.init();
 
       this.penSizeController = new pskl.controller.PenSizeController();
       this.penSizeController.init();
 
+      //@ts-ignore
       this.fileDropperService = new pskl.service.FileDropperService(this.piskelController);
       this.fileDropperService.init();
 
       this.userWarningController = new pskl.controller.UserWarningController(this.piskelController);
       this.userWarningController.init();
 
+      //@ts-ignore
       this.performanceReportService = new pskl.service.performance.PerformanceReportService(
         this.piskelController,
         this.currentColorsService);
       this.performanceReportService.init();
 
+      //@ts-ignore
       this.clipboardService = new pskl.service.ClipboardService(this.piskelController);
       this.clipboardService.init();
 

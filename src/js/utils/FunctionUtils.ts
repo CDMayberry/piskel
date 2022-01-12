@@ -1,7 +1,7 @@
 module pskl {
     export module utils {
         export module FunctionUtils {
-            export function memo(fn, cache, scope) {
+            export function memo(fn, cache, scope?) {
                 var memoized = function () {
                     var key = window.Array.prototype.join.call(arguments, '-');
                     if (!cache[key]) {
