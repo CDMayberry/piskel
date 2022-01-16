@@ -197,7 +197,7 @@
   "js/service/palette/reader/PalettePalReader.js",
   "js/service/palette/reader/PaletteTxtReader.js",
   "js/service/palette/PaletteImportService.js",
-  "js/service/pensize/PenSizeService.js",
+  "js/compiled/service/pensize/PenSizeService.js",
   "js/compiled/service/SavedStatusService.js",
   "js/compiled/service/keyboard/KeycodeTranslator.js",
   "js/compiled/service/keyboard/KeyUtils.js",
