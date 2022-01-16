@@ -211,8 +211,8 @@
   "js/compiled/service/FileDropperService.js",
   "js/compiled/service/SelectedColorsService.js",
   "js/compiled/service/MouseStateService.js",
-  "js/service/performance/PerformanceReport.js",
-  "js/service/performance/PerformanceReportService.js",
+  "js/compiled/service/performance/PerformanceReport.js",
+  "js/compiled/service/performance/PerformanceReportService.js",
 
   // Tools
   "js/compiled/tools/ToolsHelper.js",
