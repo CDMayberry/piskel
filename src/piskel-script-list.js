@@ -187,7 +187,7 @@
   "js/compiled/service/BackupService.js",
   "js/compiled/service/BeforeUnloadService.js",
   "js/compiled/service/HistoryService.js",
-  "js/service/color/ColorSorter.js",
+  "js/compiled/service/color/ColorSorter.js",
   "js/service/palette/CurrentColorsPalette.js",
   "js/service/palette/PaletteService.js",
   "js/service/palette/PaletteGplWriter.js",
