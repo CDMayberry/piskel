@@ -3,7 +3,7 @@ module pskl {
         export module frame {
 
             export class AsyncCachedFrameProcessor extends CachedFrameProcessor {
-                constructor(cacheResetInterval) {
+                constructor(cacheResetInterval?) {
                     super();
                 }
                 get(frame, namespace) {

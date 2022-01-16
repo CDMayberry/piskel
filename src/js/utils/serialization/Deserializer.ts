@@ -19,7 +19,7 @@ module pskl {
                     this.layers_ = [];
                 }
 
-                static deserialize(data, onSuccess, onError) {
+                static deserialize(data, onSuccess, onError?) {
                     try {
                         var deserializer;
                         if (data.modelVersion == Constants.MODEL_VERSION) {

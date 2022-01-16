@@ -17,12 +17,19 @@ module pskl {
   export module app {
     // TODO: Come back and give these proper types after.
     export declare var shortcutService;
+    export declare var backupService;
+    export declare var savedStatusService;
     export declare var piskelController;
     export declare var selectionManager;
     export declare var mouseStateService;
     export declare var selectedColorsService;
     export declare var penSizeService;
     export declare var drawingController;
+    export declare var paletteService;
+    export declare var historyService;
+    export declare var paletteImportService;
+    export declare var sessionId;
+    export declare var localStorageService;
 
     export function init() {
       /**

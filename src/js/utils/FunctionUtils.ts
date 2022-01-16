@@ -16,7 +16,7 @@ module pskl {
              * Returns a throttled version of the provided method, that will be called at most
              * every X milliseconds, where X is the provided interval.
              */
-            export function throttle(fn, interval) {
+            export function throttle(fn: () => void, interval: number) {
                 var last;
                 var timer;
                 return function () {

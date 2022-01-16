@@ -76,6 +76,7 @@ module pskl {
                 return new Uint32Array(pixels);
             };
 
+            // How is this different than clone?
             static createEmptyFromFrame(frame) {
                 return new Frame(frame.getWidth(), frame.getHeight());
             };
