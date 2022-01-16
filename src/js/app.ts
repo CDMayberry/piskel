@@ -31,9 +31,10 @@ module pskl {
     export declare var sessionId;
     export declare var localStorageService;
     export declare var desktopStorageService;
-    export declare var fileDownloadStorageService;
+    export declare var fileDownloadStorageService: pskl.service.storage.FileDownloadStorageService;
     export declare var indexedDbStorageService;
     export declare var galleryStorageService;
+    export declare var currentColorsService;
 
     export function init() {
       /**
@@ -155,7 +156,6 @@ module pskl {
       this.localStorageService = new pskl.service.storage.LocalStorageService(this.piskelController);
       this.localStorageService.init();
 
-      //@ts-ignore
       this.fileDownloadStorageService = new pskl.service.storage.FileDownloadStorageService(this.piskelController);
       this.fileDownloadStorageService.init();
 

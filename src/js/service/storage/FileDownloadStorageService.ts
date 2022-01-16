@@ -30,6 +30,8 @@ module pskl {
     export module service {
         export module storage {
             export class FileDownloadStorageService {
+                constructor(piskelController?) { }
+
                 init() { };
 
                 save(piskel) {
