@@ -16,7 +16,7 @@ module pskl {
              * @param  {Function} onSuccess Called if the deserialization of the piskel is successful
              * @param  {Function} onError NOT USED YET
              */
-            export function loadFromFile(file, onSuccess, onError) {
+            export function loadFromFile(file, onSuccess, onError?) {
                 pskl.utils.FileUtils.readFile(file, function (content) {
                     var rawPiskel = pskl.utils.Base64.toText(content);
                     decodePiskelFile(
@@ -34,7 +34,8 @@ module pskl {
                 });
             }
 
-            export function decodePiskelFile(rawPiskel, onSuccess, onError) {
+            // ISSUE: onError isn't passed by everyone who calls but it seems like it's required if there's an issue.
+            export function decodePiskelFile(rawPiskel, onSuccess, onError?) {
                 var serializedPiskel;
                 if (rawPiskel.length === 0) {
                     onError(FAILURE.EMPTY);

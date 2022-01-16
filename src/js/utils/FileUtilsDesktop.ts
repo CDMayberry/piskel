@@ -16,7 +16,7 @@ module pskl {
             };
 
 
-            export function chooseFilenameDialog(nwsaveas, accept) {
+            export function chooseFilenameDialog(nwsaveas?, accept?) {
                 var deferred = Q.defer();
                 var fileInputElement = getFileInputElement(nwsaveas, accept);
                 var changeListener = function (evt) {

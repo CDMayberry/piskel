@@ -30,6 +30,10 @@ module pskl {
     export declare var paletteImportService;
     export declare var sessionId;
     export declare var localStorageService;
+    export declare var desktopStorageService;
+    export declare var fileDownloadStorageService;
+    export declare var indexedDbStorageService;
+    export declare var galleryStorageService;
 
     export function init() {
       /**

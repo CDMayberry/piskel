@@ -178,12 +178,12 @@
   "js/compiled/widgets/Wizard.js",
 
   // Services
-  "js/service/storage/StorageService.js",
-  "js/service/storage/FileDownloadStorageService.js",
-  "js/service/storage/IndexedDbStorageService.js",
-  "js/service/storage/LocalStorageService.js",
-  "js/service/storage/GalleryStorageService.js",
-  "js/service/storage/DesktopStorageService.js",
+  "js/compiled/service/storage/StorageService.js",
+  "js/compiled/service/storage/FileDownloadStorageService.js",
+  "js/compiled/service/storage/IndexedDbStorageService.js",
+  "js/compiled/service/storage/LocalStorageService.js",
+  "js/compiled/service/storage/GalleryStorageService.js",
+  "js/compiled/service/storage/DesktopStorageService.js",
   "js/compiled/service/BackupService.js",
   "js/compiled/service/BeforeUnloadService.js",
   "js/compiled/service/HistoryService.js",

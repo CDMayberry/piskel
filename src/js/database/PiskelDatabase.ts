@@ -15,7 +15,7 @@ module pskl {
         export class PiskelDatabase {
             db: any;
 
-            constructor(options) {
+            constructor(options?) {
                 this.db = null;
             }
 
