@@ -10,12 +10,11 @@ module pskl {
     export declare var appEngineToken_;
 
     export declare var controller;
-    export declare var selection;
     export declare var rendering;
     export declare var devtools;
 
     export module app {
-        // TODO: Come back and give these proper types after.
+        // TODO: I have no idea how, but even though init is using 'this' it's assigning them to these variables. Sketchy...
         export declare var shortcutService: pskl.service.keyboard.ShortcutService;
         export declare var backupService: pskl.service.BackupService;
         export declare var savedStatusService: pskl.service.SavedStatusService;
@@ -28,13 +27,14 @@ module pskl {
         export declare var paletteService: pskl.service.palette.PaletteService;
         export declare var historyService: pskl.service.HistoryService;
         export declare var paletteImportService: pskl.service.palette.PaletteImportService;
-        export declare var sessionId;
+        export declare var sessionId: string;
         export declare var localStorageService: pskl.service.storage.LocalStorageService;
         export declare var desktopStorageService: pskl.service.storage.DesktopStorageService;
         export declare var fileDownloadStorageService: pskl.service.storage.FileDownloadStorageService;
         export declare var indexedDbStorageService: pskl.service.storage.IndexedDbStorageService;
         export declare var galleryStorageService: pskl.service.storage.GalleryStorageService;
         export declare var currentColorsService: pskl.service.CurrentColorsService;
+        export declare var fileDropperService: pskl.service.FileDropperService;
 
         export function init() {
             /**

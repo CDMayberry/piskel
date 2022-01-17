@@ -86,11 +86,11 @@
   "js/compiled/database/migrate/MigrateLocalStorageToIndexedDb.js",
 
   // Selection
-  "js/selection/SelectionManager.js",
-  "js/selection/BaseSelection.js",
-  "js/selection/LassoSelection.js",
-  "js/selection/RectangularSelection.js",
-  "js/selection/ShapeSelection.js",
+  "js/compiled/selection/SelectionManager.js",
+  "js/compiled/selection/BaseSelection.js",
+  "js/compiled/selection/LassoSelection.js",
+  "js/compiled/selection/RectangularSelection.js",
+  "js/compiled/selection/ShapeSelection.js",
 
   // Rendering
   "js/rendering/AbstractRenderer.js",
