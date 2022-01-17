@@ -64,7 +64,7 @@ module pskl {
             export class PaletteImportService {
                 init() { };
 
-                read(file, onSuccess, onError) {
+                read(file, onSuccess, onError?) {
                     var reader = this.getReader_(file, onSuccess, onError);
                     if (reader) {
                         reader.read();

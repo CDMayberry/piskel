@@ -18,7 +18,7 @@ module pskl {
             nextSnapshotDate: number;
             backupDatabase: any;
 
-            constructor(piskelController, backupDatabase) {
+            constructor(piskelController, backupDatabase?) {
                 this.piskelController = piskelController;
                 // Immediately store the current when initializing the Service to avoid storing
                 // empty sessions.

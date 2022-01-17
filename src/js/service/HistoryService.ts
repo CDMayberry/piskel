@@ -9,7 +9,7 @@ module pskl {
             currentIndex: number;
             lastLoadState: number;
 
-            constructor(piskelController, shortcutService, deserializer, serializer) {
+            constructor(piskelController, shortcutService?, deserializer?, serializer?) {
                 // Use the real piskel controller that will not fire events when calling setters
                 this.piskelController = piskelController.getWrappedPiskelController();
 
