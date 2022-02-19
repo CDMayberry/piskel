@@ -93,16 +93,16 @@
   "js/compiled/selection/ShapeSelection.js",
 
   // Rendering
-  "js/rendering/AbstractRenderer.js",
-  "js/rendering/CompositeRenderer.js",
-  "js/rendering/layer/LayersRenderer.js",
-  "js/rendering/frame/FrameRenderer.js",
-  "js/rendering/OnionSkinRenderer.js",
-  "js/rendering/frame/BackgroundImageFrameRenderer.js",
-  "js/rendering/frame/CachedFrameRenderer.js",
-  "js/rendering/CanvasRenderer.js",
-  "js/rendering/FramesheetRenderer.js",
-  "js/rendering/PiskelRenderer.js",
+  "js/compiled/rendering/AbstractRenderer.js",
+  "js/compiled/rendering/CompositeRenderer.js",
+  "js/compiled/rendering/layer/LayersRenderer.js",
+  "js/compiled/rendering/frame/FrameRenderer.js",
+  "js/compiled/rendering/OnionSkinRenderer.js",
+  "js/compiled/rendering/frame/BackgroundImageFrameRenderer.js",
+  "js/compiled/rendering/frame/CachedFrameRenderer.js",
+  "js/compiled/rendering/CanvasRenderer.js",
+  "js/compiled/rendering/FramesheetRenderer.js",
+  "js/compiled/rendering/PiskelRenderer.js",
 
   // Controllers
   "js/controller/piskel/PiskelController.js",

@@ -29,7 +29,7 @@ module pskl {
              * @param {String} transparentColor (optional) color to use to represent transparent pixels.
              * @param {String} globalAlpha (optional) global frame opacity
              */
-            export function drawToCanvas(frame, canvas, transparentColor, globalAlpha) {
+            export function drawToCanvas(frame, canvas, transparentColor?, globalAlpha?) {
                 var context = canvas.getContext('2d');
                 globalAlpha = isNaN(globalAlpha) ? 1 : globalAlpha;
                 context.globalAlpha = globalAlpha;

@@ -10,7 +10,6 @@ module pskl {
     export declare var appEngineToken_;
 
     export declare var controller;
-    export declare var rendering;
     export declare var devtools;
 
     export module app {

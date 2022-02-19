@@ -1,7 +1,7 @@
 module pskl {
     export module utils {
         export module ImageResizer {
-            export function scale(image, factor, smoothingEnabled) {
+            export function scale(image, factor, smoothingEnabled?) {
                 resize(image, image.width * factor, image.height * factor, smoothingEnabled);
             }
 
